@@ -33,10 +33,31 @@ describe("UI test case group 1",()=>{
         expect(checkInput).toHaveAttribute("name","papi")
     })
 })
+describe.skip("UI test case group skip",()=>{
+    test("test case 1",()=>{
+        render(<App/>)
+        let checkInput=screen.getByRole("textbox");
+        expect(checkInput).toHaveAttribute("name","papi")
+    })
+})
+describe.only("UI test case group only",()=>{
+    test("test case 1",()=>{
+        render(<App/>)
+        let checkInput=screen.getByRole("textbox");
+        expect(checkInput).toHaveAttribute("name","papi")
+    })
+})
 describe("UI test case group 2",()=>{
     test("test case 1",()=>{
         render(<App/>)
         let checkInput=screen.getByRole("textbox");
         expect(checkInput).toHaveAttribute("name","papi")
+    })
+    describe("UI test case group in nested",()=>{
+        test("test case 2",()=>{
+            render(<App/>)
+            let checkInput=screen.getByRole("textbox");
+            expect (checkInput).toHaveAttribute("name","papi")
+        })
     })
 })
