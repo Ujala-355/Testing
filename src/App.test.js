@@ -47,3 +47,10 @@ test("on change event testing 1",()=>{
     fireEvent.change(input,{target:{value:"a"}});
     expect(input.value).toBe("atest")
 });
+
+test("Click Event test case on button",()=>{
+    render(<App/>)
+    const b=screen.getByRole("button");
+    fireEvent.click(b);
+    expect (screen.getByText("update data")).toBeInTheDocument();
+})
