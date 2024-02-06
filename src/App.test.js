@@ -54,3 +54,8 @@ test("Click Event test case on button",()=>{
     fireEvent.click(b);
     expect (screen.getByText("update data")).toBeInTheDocument();
 })
+
+test("Snapshot for app component",()=>{
+    const conatiner=render(<App/>)
+    expect(conatiner).toMatchSnapshot()
+})
