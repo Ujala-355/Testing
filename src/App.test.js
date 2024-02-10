@@ -64,3 +64,6 @@ test("Snapshot for app component",()=>{
     expect(conatiner).toMatchSnapshot()
 })
 
+beforeEach(()=>{
+    console.log("*** before each hook ***")
+})
