@@ -67,3 +67,7 @@ test("Snapshot for app component",()=>{
 beforeEach(()=>{
     console.log("*** before each hook ***")
 })
+
+afterEach(()=>{
+    console.log("__after Each__")
+})
