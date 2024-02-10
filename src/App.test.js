@@ -48,6 +48,10 @@ test("on change event testing 1",()=>{
     expect(input.value).toBe("atest")
 });
 
+beforeAll(()=>{
+    console.log("before all hook")
+})
+
 test("Click Event test case on button",()=>{
     render(<App/>)
     const b=screen.getByRole("button");
@@ -59,3 +63,4 @@ test("Snapshot for app component",()=>{
     const conatiner=render(<App/>)
     expect(conatiner).toMatchSnapshot()
 })
+
