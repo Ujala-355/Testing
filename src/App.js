@@ -2,18 +2,13 @@ const App=()=>{
     return(
         <>
             <div>
-                  <h1>RTL Query geetAllByRole</h1>
-                  <button>Click</button>
-                  <button>Click</button>
-                  <button>Click</button>
-                  <button>Click</button>
-                  <select>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                  </select>
-                  
+                <h1>RTL Query: getByLabelText</h1>
+                <label htmlFor="user-name">UserName</label>
+                <input type="text" id="user-name"/>
+                <br/>
+                <br/>
+                <label htmlFor="CheckBox">Skills</label>
+                <input type="checkbox" id="CheckBox" defaultChecked={true}/>
             </div>
         </>
     )
