@@ -1,11 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("getLabelText", () => {
+test("getLabelText multiple", () => {
   render(<App />);
-  const input = screen.getByLabelText("UserName");
-  const checkbox=screen.getByLabelText("Skills");
-
-  expect(input).toBeInTheDocument();
-  expect(checkbox).toBeInTheDocument();
+    const inputs=screen.getAllByLabelText("Skills");
+    // expect(inputs[3]).toBeInTheDocument();
+    for (let i=0; i<inputs.length;i++){
+        expect(inputs[i]).toBeInTheDocument();
+        expect(inputs[i]).toHaveValue("ujala");
+    }
 });
