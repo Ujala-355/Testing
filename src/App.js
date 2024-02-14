@@ -5,7 +5,8 @@ const App=()=>{
             <div element-id="test-element">
                 <h1>getByDisplayValue and getAllByDisplayValue</h1> 
                 <input type="text" defaultValue={"ujala"}/>
-                
+                <br/>
+                <textarea defaultValue="Ujala saini"/>
             </div>
         </>
     )
