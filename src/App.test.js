@@ -1,12 +1,19 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("getAllByPlaceholderText multiple", () => {
-    render(<App />);
-    const inputs=screen.getAllByPlaceholderText("enter username")
-    // expect(inputs[1]).toBeInTheDocument();
-    for(let i=0; i<inputs.length; i++){
-        expect(inputs[i]).toBeInTheDocument();
+test("single button testing",()=>{
+    render(<App/>)
+    const btn=screen.getByText("Login");
+    expect(btn).toBeInTheDocument();
+})
+test("single p testing",()=>{
+    render(<App/>)
+    const btn=screen.getByText("Login");
+    expect(btn).toBeInTheDocument();
+})
 
-    }
-});
+test("single h1 tag testing",()=>{
+    render(<App/>)
+    const H=screen.getByText("H1 Tag testing")
+    expect(H).toBeInTheDocument();
+})
