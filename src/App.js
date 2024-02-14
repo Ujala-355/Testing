@@ -1,13 +1,15 @@
 const App=()=>{
     return(
         <>
-            <h1>RTL Overriding data-testid</h1>
+            <h1>RTL : getByDisplayValue and getAllByDisplayValue</h1>
             <div element-id="test-element">
-                <h1>Overriding data-testid</h1>
-                <h1>H1 Tag testing 1</h1> 
+                <h1>getByDisplayValue and getAllByDisplayValue</h1> 
+                <input type="text" defaultValue={"ujala"}/>
+                
             </div>
         </>
     )
 }
 export default App;
+
 

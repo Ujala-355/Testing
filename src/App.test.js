@@ -1,11 +1,9 @@
-import { render, screen, configure } from "@testing-library/react";
+import { render, screen} from "@testing-library/react";
 import App from "./App";
 
-configure({testIdAttribute:"element-id"})
-
-test("test div with data test id",()=>{
+test("testing with display",()=>{
     render(<App/>)
-    const divElement=screen.getByTestId("test-element");
-    expect(divElement).toBeInTheDocument();
+    const input=screen.getByDisplayValue("ujala")
+    expect(input).toBeInTheDocument();
 })
 
