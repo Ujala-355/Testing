@@ -8,12 +8,16 @@ test("single button testing",()=>{
 })
 test("single p testing",()=>{
     render(<App/>)
-    const btn=screen.getByText("Login");
+    const btn=screen.getByText("P tag testing");
     expect(btn).toBeInTheDocument();
+    expect(btn).toHaveClass("Ptext")
 })
 
-test("single h1 tag testing",()=>{
+test("multiple h1 tag testing",()=>{
     render(<App/>)
-    const H=screen.getByText("H1 Tag testing")
-    expect(H).toBeInTheDocument();
+    const H=screen.getAllByText("H1 Tag testing")
+    // expect(H[0]).toBeInTheDocument();
+    for (let i=0; i<H.length; i++){
+        expect(H[i]).toBeInTheDocument();
+    }
 })
