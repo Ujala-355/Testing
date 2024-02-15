@@ -1,16 +1,16 @@
 const App=()=>{
     return(
         <>  <div>
-                <h1>RTL: getBYTitle and getllByTitle</h1>
-                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGljfGVufDB8fDB8fHww" 
-                    alt="dummy Img"
+                <h1>Assertion Methods</h1>
+                <input type="text" 
+                    defaultValue={"Ujala"}
+                    name="userName"
+                    id="user-name"
+                    className="testStyle"
+                    disabled
+                    data-test="tests"
                 />
-                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGljfGVufDB8fDB8fHww" 
-                    alt="dummy Img"
-                />
-                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGljfGVufDB8fDB8fHww" 
-                    alt="dummy Img"
-                />
+                <button className="button1" id="button_id">Click here</button>
             </div>
         </>
     )
