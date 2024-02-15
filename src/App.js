@@ -1,12 +1,12 @@
 const App=()=>{
     return(
-        <>
-            <h1>RTL : getByDisplayValue and getAllByDisplayValue</h1>
-            <div element-id="test-element">
-                <h1>getByDisplayValue and getAllByDisplayValue</h1> 
-                <input type="text" defaultValue={"ujala"}/>
+        <>  <div>
+                <h1>RTL: getBYTitle and getllByTitle</h1>
+                <button title="click">Click me</button>
                 <br/>
-                <textarea defaultValue="Ujala saini"/>
+                <span title="black spade">&#x2660;</span>
+                <span title="black spade">&#x2660;</span>
+                <span title="black spade">&#x2660;</span>
             </div>
         </>
     )
