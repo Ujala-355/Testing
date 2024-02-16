@@ -1,22 +1,17 @@
 import { render, screen} from "@testing-library/react";
 import App from "./App";
            
-test("test input",()=>{
-    render(<App/>);
-    const input=screen.getByRole("textbox");
-    expect(input).toBeInTheDocument();
-    expect(input).toHaveValue("Ujala")
-    // expect(input).toBeEnabled();
-    expect(input).toBeDisabled();
-    expect(input).toHaveAttribute("id");
-    expect(input).toHaveAttribute("data-test")
-    expect(input).toHaveClass("testStyle")
-})
-test("test nagitive cases",()=>{
-    render(<App/>);
-    const btn=screen.getByRole("button");
-    expect(btn).toBeInTheDocument();
-    expect(btn).toHaveClass("button1")
-    expect(btn).not.toHaveClass("button")
-    // expect(btn).not.toHaveAttribute("id")
+// test("text match with string",()=>{
+//     render(<App/>)
+//     const div=screen.getByText("Hello World",{exact:false});
+//     expect(div).toBeInTheDocument();
+// })
+
+test("text match with Regex",()=>{
+    render(<App/>)
+    // const div=screen.getByText(/Hello/);
+    // const div=screen.getByText(/lo Wo/);
+    // const div=screen.getByText(/Hello/i);
+    const div=screen.getByText(/Hello w?orld/i);
+    expect(div).toBeInTheDocument();
 })
