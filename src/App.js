@@ -1,12 +1,11 @@
-import React from 'react';
+import React,{useState} from 'react';
 const App = () => {
+    const [data,setData]=useState("")
     return (
         <>
             <div>
-                Hello World
-                <p>hello p1 tag</p>
-                <p>hello p2 tag</p>
-                <p>hello p3 tag</p>
+                <h1>{data}</h1>
+                <button onClick={()=>setData("Welcome")}>Click me </button>
             </div>
         </>
     );
