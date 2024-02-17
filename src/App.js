@@ -3,7 +3,7 @@ const App=()=>{
         <>
             <h1>TextMatch with String and Regex</h1>
             <div>
-                Hello worLd 
+                Hello world 
             </div>
         </>
     )

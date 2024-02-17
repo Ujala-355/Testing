@@ -1,17 +1,13 @@
 import { render, screen} from "@testing-library/react";
 import App from "./App";
            
-// test("text match with string",()=>{
-//     render(<App/>)
-//     const div=screen.getByText("Hello World",{exact:false});
-//     expect(div).toBeInTheDocument();
-// })
-
-test("text match with Regex",()=>{
+test("Test match with function",()=>{
     render(<App/>)
-    // const div=screen.getByText(/Hello/);
-    // const div=screen.getByText(/lo Wo/);
-    // const div=screen.getByText(/Hello/i);
-    const div=screen.getByText(/Hello w?orld/i);
-    expect(div).toBeInTheDocument();
+    // const dv=screen.getByText((content,element)=>content.startsWith("Hello"))
+    // const dv=screen.getByText((content,element)=>content.endsWith("World"))
+    // const dv=screen.getByText((content,element)=>content.endsWith("ld"))
+    const dv=screen.getByText((content,element)=>content.endsWith("ld"))
+
+
+    expect(dv).toBeInTheDocument();
 })
