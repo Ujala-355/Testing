@@ -1,8 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import { render} from "@testing-library/react";
 import App from "./App";
 
-test("tewst element with find by",async() => {
-  render(<App />);
-  const find=await screen.findByText("data found",{},{timeout:4000});
-  expect(find).toBeInTheDocument();
-});
+test("Test case with custom query",()=>{
+    render(<App/>)
+    const element=document.querySelector("#testId");
+    expect(element).toBeInTheDocument();
+    expect(element).toHaveTextContent("Hello World")
+})
