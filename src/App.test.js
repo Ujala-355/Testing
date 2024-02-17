@@ -2,10 +2,10 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
 
-test("Click event with user event library", async () => {
-    userEvent.setup()
-    render(<App />);
-    const btn = screen.getByText("Click me");
-    await userEvent.click(btn);
-    expect(screen.getByText("Welcome")).toBeInTheDocument();
-});
+test("On change event testing",async ()=>{
+    userEvent.setup();
+    render(<App/>);
+    const el=screen.getByRole("textbox")
+    await userEvent.type(el,"ujala")
+    expect(screen.getByText("ujala")).toBeInTheDocument();
+})
