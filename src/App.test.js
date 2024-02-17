@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("queryByText Test Case", () => {
+test("tewst element with find by",async() => {
   render(<App />);
-  const buttonElement = screen.queryByText("Login");
-  expect(buttonElement).toBeInTheDocument();
+  const find=await screen.findByText("data found",{},{timeout:4000});
+  expect(find).toBeInTheDocument();
 });
