@@ -1,11 +1,10 @@
 import React from 'react';
-import User from "./User";
-const App = () => {
+const App = (props) => {
     return (
         <>
             <div>
-                <h1>Test Component Props</h1>
-                <User name1="saini"/>
+                <h1>Functional Props Testing and Mocking</h1>
+                <button onClick={props.testFunction}>Click</button>
             </div>
         </>
     );
